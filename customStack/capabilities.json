@@ -1,0 +1,115 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Category",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Channel",
+            "name": "channel",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Value",
+            "name": "measure_1",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Growth",
+            "name": "measure_2",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "Arc": {
+            "displayName": "Custom Style",
+            "properties": {
+                "text_postive": {
+                    "displayName": "text postive",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "text_negative": {
+                    "displayName": "text negative",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "axis_text_size": {
+                    "displayName": "axis text",
+                    "description": "Size of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                },
+                "bar_text_size": {
+                    "displayName": "Bar Text",
+                    "description": "Size of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                },
+                "legend_text_size": {
+                    "displayName": "Legend Text",
+                    "description": "Size of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                },
+                "rect_text_size": {
+                    "displayName": "Rect Text",
+                    "description": "Size of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                }
+           
+    
+            }
+        }
+    
+        },
+
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    }
+                },
+                "values": {
+                    "group": {
+                        "by": "channel",
+                        "select": [{
+                                "for": {
+                                    "in": "measure_1"
+                                }
+                                
+                            },
+                            {
+                                "for": {
+                                    "in": "measure_2"
+                                }
+                                
+                            }
+
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
