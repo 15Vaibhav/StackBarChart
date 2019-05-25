@@ -1,2 +1,3 @@
 # StackBarChart
-Stack Bar Chart
+Stack Bar Chart for Microsoft PowerBi
+![](stackBar.png)
